@@ -1,0 +1,8 @@
+{
+  "name": "medico-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm install --prefix frontend && npm run build --prefix frontend && npm install --prefix admin && npm run build --prefix admin && mkdir -p dist/admin && cp -r frontend/dist/* dist/ && cp -r admin/dist/* dist/admin/"
+  }
+}
