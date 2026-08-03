@@ -11,7 +11,11 @@ const Navbar = () => {
     const [showProfileMenu, setShowProfileMenu] = useState(false)
 
     const {token, setToken, userData} = useContext(AppContext)
-    const adminUrl = import.meta.env.VITE_ADMIN_URL || 'http://localhost:5174'
+    const adminUrl = import.meta.env.VITE_ADMIN_URL || (
+        window.location.hostname === 'localhost'
+            ? 'http://localhost:5174'
+            : `${window.location.origin}/admin`
+    )
 
     const logout = () => {
         setToken(false)

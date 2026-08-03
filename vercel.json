@@ -6,6 +6,10 @@
       "destination": "https://medico-backend-9t2h.onrender.com/api/:path*"
     },
     {
+      "source": "/admin",
+      "destination": "/admin/index.html"
+    },
+    {
       "source": "/admin/:path*",
       "destination": "/admin/index.html"
     },
