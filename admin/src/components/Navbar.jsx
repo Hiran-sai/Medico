@@ -13,7 +13,6 @@ const Navbar = () => {
     const navigate = useNavigate()
 
     const logout = () => {
-        navigate('/')
         if (aToken) {
             setAToken('')
             localStorage.removeItem('aToken')
@@ -22,6 +21,7 @@ const Navbar = () => {
             setDToken('')
             localStorage.removeItem('dToken')
         }
+        window.location.href = '/'
     }
 
   return (

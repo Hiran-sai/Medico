@@ -13,8 +13,8 @@ const Navbar = () => {
     const {token, setToken, userData} = useContext(AppContext)
     const adminUrl = import.meta.env.VITE_ADMIN_URL || (
         window.location.hostname === 'localhost'
-            ? 'http://localhost:5174'
-            : `${window.location.origin}/admin`
+            ? 'http://localhost:5174/login'
+            : `${window.location.origin}/admin/login`
     )
 
     const logout = () => {
